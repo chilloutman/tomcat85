@@ -556,7 +556,7 @@ public class StandardService extends LifecycleMBeanBase implements Service {
                     log.error(message, e);
 
                     if (Boolean.getBoolean("org.apache.catalina.startup.EXIT_ON_INIT_FAILURE"))
-                        throw new LifecycleException(message);
+                        throw new LifecycleException(message, e);
                 }
             }
         }
